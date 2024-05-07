@@ -12,7 +12,13 @@ class Quiz extends StatefulWidget {
 class _QuizState extends State<Quiz> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: Scaffold(
         body: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -21,6 +27,7 @@ class _QuizState extends State<Quiz> {
           ),
           child: const StartScreen(),
         ),
-      );
+      ),
+    );
   }
 }

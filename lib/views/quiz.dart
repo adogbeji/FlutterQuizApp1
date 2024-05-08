@@ -22,7 +22,9 @@ class _QuizState extends State<Quiz> {
         body: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: [Colors.pink, Colors.red, Colors.yellow]
+              colors: [Colors.pink, Colors.red, Colors.yellow],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
             ),
           ),
           child: const StartScreen(),

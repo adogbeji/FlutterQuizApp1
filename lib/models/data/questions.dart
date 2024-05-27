@@ -12,4 +12,29 @@ List<QuizQuestion> questions = [
     ], 
     'Paris',
   ),
+  QuizQuestion(
+    'What day do you go to church?', 
+    [
+      'Saturday',
+      'Tuesday',
+      'Thursday',
+      'Sunday',
+      'Wednesday',
+      'Monday',
+      'Friday'
+    ], 
+    'Sunday'
+  ),
+  QuizQuestion(
+    'Which technology is newest?', 
+    [
+      'JavaScript',
+      'Android',
+      'Node.js',
+      'SQL',
+      'Flutter',
+      'Python'
+    ], 
+    'Flutter'
+  ),
 ];

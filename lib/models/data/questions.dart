@@ -49,4 +49,16 @@ List<QuizQuestion> questions = [
     ], 
     'Airline',
   ),
+  QuizQuestion(
+    'Which fruit is yellow?', 
+    [
+      'Mango',
+      'Apple',
+      'Pear',
+      'Lemon',
+      'Apple',
+      'Kiwi'
+    ], 
+    'Lemon'
+  ),
 ];

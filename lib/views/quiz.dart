@@ -10,8 +10,18 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
+  var activeScreen = 'start-screen';
+
+  void switchScreen() {
+    setState(() {
+      activeScreen = 'answers-screen';
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    var screenWidget = StartScreen(startQuiz: switchScreen);
+
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -27,7 +37,7 @@ class _QuizState extends State<Quiz> {
               end: Alignment.bottomRight,
             ),
           ),
-          child: const StartScreen(),
+          child: screenWidget,
         ),
       ),
     );

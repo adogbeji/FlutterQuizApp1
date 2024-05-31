@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:quiz_app_1/views/start_screen.dart';
+import 'package:quiz_app_1/views/questions_screen.dart';
 
 class Quiz extends StatefulWidget {
   const Quiz({super.key});
@@ -20,7 +21,11 @@ class _QuizState extends State<Quiz> {
 
   @override
   Widget build(BuildContext context) {
-    var screenWidget = StartScreen(startQuiz: switchScreen);
+    Widget screenWidget = StartScreen(startQuiz: switchScreen);
+
+    if (activeScreen == 'answers-screen') {
+      screenWidget = const QuestionsScreen();
+    }
 
     return MaterialApp(
       title: 'Flutter Demo',

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:quiz_app_1/models/data/questions.dart';
+
 class QuestionsScreen extends StatefulWidget {
   const QuestionsScreen({super.key, required this.onSelectAnswer});
 
@@ -22,14 +24,17 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
+    final currentQuestion = questions[questionIndex];
+
+    return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         // mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            'Questions Here...',
-            style: TextStyle(
+            // 'Questions Here...',
+            currentQuestion.question,
+            style: const TextStyle(
               fontSize: 24,
               color: Colors.white,
             ),

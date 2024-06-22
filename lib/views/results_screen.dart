@@ -5,6 +5,14 @@ class ResultsScreen extends StatelessWidget {
 
   final List<String> chosenAnswers;
 
+  List<Map<String, Object>> getSummaryData() {
+    final List<Map<String, Object>> summary = [];
+
+    for (var x = 0; x < chosenAnswers.length; x++) {}
+
+    return summary;
+  }
+
   @override
   Widget build(BuildContext context) {
     return const Center(

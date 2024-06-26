@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:quiz_app_1/models/data/questions.dart';
+import 'package:quiz_app_1/views/question_summary.dart';
 
 class ResultsScreen extends StatelessWidget {
   const ResultsScreen(this.chosenAnswers, {super.key});
@@ -13,6 +14,7 @@ class ResultsScreen extends StatelessWidget {
     for (var x = 0; x < chosenAnswers.length; x++) {
       summary.add(
         {
+          'question_index': 1,
           'question': questions[x].question,
           'chosen_answer': chosenAnswers[x],
           'correct_answer': questions[x].correctAnswer,
@@ -36,6 +38,7 @@ class ResultsScreen extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text('You\'ve answered $numberOfCorrectAnswers questions out of $totalNumberOfQuestions questions correctly!'),
+          QuestionSummary(summaryData: summaryData),
         ],
       ),
     );
